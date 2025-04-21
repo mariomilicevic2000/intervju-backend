@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.lang.NonNull;
+//import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,11 +29,11 @@ public class TechnicianServiceImpl implements TechnicianService {
 
         technicianRepository.save(technician);
     }
-    @NonNull
-    @Override
-    public List<Technician> getAllTechnicians() {
-        return technicianRepository.findAll();
-    }
+//    @NonNull
+//    @Override
+//    public List<Technician> getAllTechnicians() {
+//        return technicianRepository.findAll();
+//    }
 
     @Override
     public Page<Technician> getTechniciansPaginated(int page, int size){
