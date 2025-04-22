@@ -3,6 +3,7 @@ package com.ht.interview.controller;
 
 import com.ht.interview.model.Technician;
 import com.ht.interview.service.TechnicianService;
+import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ public class TechnicianController {
     public TechnicianController(TechnicianService technicianService) {this.technicianService = technicianService;}
 
     @PostMapping("/admin/technicians")
-    public ResponseEntity<String> createTechnician(@RequestBody Technician technician) {
+    public ResponseEntity<String> createTechnician(@Valid @RequestBody Technician technician) {
         technicianService.createTechnician(technician);
         return new ResponseEntity<>("Technician added successfully",HttpStatus.CREATED);
     }
