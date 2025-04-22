@@ -8,7 +8,7 @@ public class GroupManager {
     @Id
     private Long groupId;
     private String managerName;
-
+    
     public GroupManager(Long groupId, String managerName) {
         this.groupId = groupId;
         this.managerName = managerName;

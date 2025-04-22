@@ -40,7 +40,7 @@ public class Technician {
 
     @NotNull(message = "Kucni broj mora biti definiran")
     @Size(min = 1, max = 5, message = "Kucni broj mora imati izmedu 1 i 5 znakova")
-    @Pattern(regexp = "^\\\\d{1,5}[A-Za-z]?$|^bb$", message = "Unesite ispravan kucni broj")
+    @Pattern(regexp = "^(\\d{1,5}[A-Za-z]?)$|^bb$", message = "Unesite ispravan kucni broj")
     private String workStreetNumber;
     @NotNull(message = "Postanski broj mora biti definiran")
     @Pattern(regexp = "^[1-5]\\d{4}$", message = "Unesite ispravan hrvatski postanski broj")
