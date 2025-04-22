@@ -19,10 +19,14 @@ Na backendu je korišten Spring Boot (Java 17). Izabran je zbog svoje robusnosti
 Korišteni dependency-ji:
 
 - Spring Web - stvaranje RESTful API-ja
-- Spring Data JPA - jednostavnije rukovanje i interakcija s bazom podataka koristeći Hibernate ORM
-- H2 Database - in-memory baza podataka koja ima minimalni setup, idealna za brz development
-- PostgreSQL database - robusna produkcijska baza podataka, deployana na Neon.tech servis preko Vercela
+- Spring Data JPA - apstrakcijski sloj, jednostavnije rukovanje i interakcija s bazom podataka koristeći Hibernate ORM, omogućuje rukovanje podacima na objektno orijentirani način umjesto "golog" SQL-a, povećan type safety
+- PostgreSQL baza podataka - JDBC driver za spajanjebackenda s PostgreSQL, robusna produkcijska baza podataka, deployana na Neon.tech servis preko Vercela
 - Spring Validation - validacija podataka primljenih sa frontenda
+
+Dodatni alati
+- H2 Database - in-memory baza podataka koja ima minimalni setup, idealna za brz development, lakša za korištenje od većih baza podataka
+- Postman - vanjska aplikacija, pogodna za slanje zahtjeva na API endpointe i testiranje
+- Spring Boot DevTools - za funkcionalnost hot reloada i live refresha, smanjuje čekanje i eliminira potrebu za restartiranjem aplikacije kada se kod promijeni
 
 ## Arhitektura podataka
 
