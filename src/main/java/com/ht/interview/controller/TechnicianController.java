@@ -20,8 +20,12 @@ public class TechnicianController {
 
     @PostMapping("/admin/technicians")
     public ResponseEntity<String> createTechnician(@Valid @RequestBody Technician technician) {
-        technicianService.createTechnician(technician);
-        return new ResponseEntity<>("Technician added successfully",HttpStatus.CREATED);
+        try {
+            technicianService.createTechnician(technician);
+            return new ResponseEntity<>("Technician added successfully",HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        }
     }
 
 //    @GetMapping("/admin/technicians")

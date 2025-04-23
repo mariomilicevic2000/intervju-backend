@@ -11,6 +11,7 @@ public class Technician {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
+    @Column(unique = true, nullable = false)
     @NotNull(message = "KP broj je obavezan")
     @Pattern(regexp = "\\d{3,10}", message = "KP broj mora biti izmedu 3 i 10 znamenaka")
     private String kpNumber;
