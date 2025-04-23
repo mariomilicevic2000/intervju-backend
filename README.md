@@ -74,6 +74,14 @@ Arhitektura se sastoji od sljedećih slojeva:
 5. PostgreSQL baza podataka - izvršava upit i vraća odgovarajuće podatke backendu
 6. Podaci u potrebnom formatu kreću "unazad" po ovim koracima i šalju se frontendu na obradu i ispis
 
+## Kretanje podataka provjere KP broja
+1. Klijentski zahtjev - frontend šalje HTTP zathjev po specifikaciji Controllera, zahtjev za provjeru postoji li navedeni KP broj u bazi, ondosno uniqueness check tehničara: GET /api/admin/technicians/check-kp/${kpNumber}, gdje je argument KP broj koji je korisnik trenutno unio.
+2. Controller prima zahtjev - prosljeđuje argument (KP broj) Service sloju, na povratku vraća boolean vrijednost u odgovoru, skupa sa status kodom
+3. Service sloj prima podatak - prosljeđuje argument Repository sloju
+4. Repository sloj prima podatak - deklarativnu funkciju existsByKpNumber(kpNumber) prevodi u SQL upit koji prosljeđuje bazi
+5. PostgreSQL baza - izvršava upit i vraća odgovarajući boolean podatak servisu
+6. Podatak u potrebnom formatu kreću "unazad" po ovim koracima i šalju se frontendu na obradu i ispis
+
 ## Kretanje podataka grupa i voditelja
 
 Budući da su grupe i njihovi voditelji dinamičan podatak koji podilazi vanjskim promjenama i nije dio funkcionalnosti forme za upis tehničara, potrebno ih je dohvatiti iz druge tablice koja sadržava te podatke. S obzirom na to, da bi se uopće korisniku na frontendu mogla pokazati forma za upis novog tehničara, potrebno je dohvatiti te podatke kako bi se dropdown za odabir grupe mogao uopće populirati podacima.
