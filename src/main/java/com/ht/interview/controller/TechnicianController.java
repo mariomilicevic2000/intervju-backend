@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:5174"})
 public class TechnicianController {
 
     private final TechnicianService technicianService;
@@ -42,4 +42,12 @@ public class TechnicianController {
         }
         return new ResponseEntity<>(techniciansPage, HttpStatus.OK);
     }
+
+    @GetMapping("/admin/technicians/check-kp/{kpNumber}")
+    public ResponseEntity<Boolean> checkIfKpNumberExists(@PathVariable String kpNumber) {
+        boolean exists = technicianService.kpNumberExists(kpNumber);
+        return new ResponseEntity<>(exists, HttpStatus.OK);
+    }
+
+
 }
