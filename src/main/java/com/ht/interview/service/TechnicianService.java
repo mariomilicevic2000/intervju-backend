@@ -9,4 +9,5 @@ public interface TechnicianService {
 //    List<Technician> getAllTechnicians();
     void createTechnician(Technician technician);
     Page<Technician> getTechniciansPaginated(int page, int size);
+    boolean kpNumberExists(String kpNumber);
 }

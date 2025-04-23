@@ -40,4 +40,9 @@ public class TechnicianServiceImpl implements TechnicianService {
         Pageable pageable = PageRequest.of(page, size);
         return technicianRepository.findAll(pageable);
     }
+
+    @Override
+    public boolean kpNumberExists(String kpNumber) {
+        return technicianRepository.existsByKpNumber(kpNumber);
+    }
 }
