@@ -111,3 +111,4 @@ Ovaj zadatak se izvršava periodično i stoga nema svoj API endpoint. Sukladno t
 ## Moguće nadogradnje
 
 - Implementirati sustav autentifikacije i autorizacije koji omogućuje kontrolu pristupa baziranog na ulogama, u smislu da primjerice admin može mijenijati dodavati tehničara u svaku grupu, dok voditelj na temelju svog pristupnog tokena može dodavati tehničare samo u svoju grupu
+- Primjeniti validaciju KP broj pri kreaciji novog tehničara
