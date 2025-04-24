@@ -12,7 +12,7 @@ Ovaj projekt čini backend dio tehničkog zadatka za intervju za poziciju Web De
     - provjerava postoje li tehničari u grupi 200,
     - automatski ih prebacuje u grupu 300.
 
-![Dijagram sustava]([text](https://ibb.co/gLCkLx5k))
+![Dijagram sustava](https://res.cloudinary.com/dta8blqe6/image/upload/v1745489202/sys_diagram_cblq8w.png)
 
 
 ## Tech stack
@@ -31,7 +31,7 @@ Dodatni alati
 - Postman - vanjska aplikacija, pogodna za slanje zahtjeva na API endpointe i testiranje
 - Spring Boot DevTools - za funkcionalnost hot reloada i live refresha, smanjuje čekanje i eliminira potrebu za restartiranjem aplikacije kada se kod promijeni
 
-![Dijagram backenda]([text]https://ibb.co/HLhnhm3v)
+![Dijagram backenda](https://res.cloudinary.com/dta8blqe6/image/upload/v1745489288/back_diagram_gmptpd.png)
 
 ## Arhitektura podataka
 
