@@ -12,6 +12,9 @@ Ovaj projekt čini backend dio tehničkog zadatka za intervju za poziciju Web De
     - provjerava postoje li tehničari u grupi 200,
     - automatski ih prebacuje u grupu 300.
 
+![Dijagram sustava]([text](https://ibb.co/gLCkLx5k))
+
+
 ## Tech stack
 
 Na backendu je korišten Spring Boot (Java 17). Izabran je zbog svoje robusnosti i bogatog ekosistema koji omogućuje jednostavno projektiranje i gradnju API servisa s čistom arhitekturom.
@@ -27,6 +30,8 @@ Dodatni alati
 - H2 Database - in-memory baza podataka koja ima minimalni setup, idealna za brz development, lakša za korištenje od većih baza podataka
 - Postman - vanjska aplikacija, pogodna za slanje zahtjeva na API endpointe i testiranje
 - Spring Boot DevTools - za funkcionalnost hot reloada i live refresha, smanjuje čekanje i eliminira potrebu za restartiranjem aplikacije kada se kod promijeni
+
+![Dijagram backenda]([text]https://ibb.co/HLhnhm3v)
 
 ## Arhitektura podataka
 
